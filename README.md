@@ -26,11 +26,10 @@ pip install opencv-python numpy pandas tensorflow numpy pandas seaborn matplotli
 6. Make sure to change the paths to the dataset and any other relevant paths as per your local setup.
 7. Once the model has been trained, you can use it to predict the height of children given a new depthmap and pose key points.
 
-
-
-
 ## Approach
 The solution uses a Convolutional Neural Network (CNN) to learn the features from the depthmap images and pose key points. The output of the CNN is then passed through a few fully connected layers to predict the height of the child.
+
+![nn](https://user-images.githubusercontent.com/79955028/231344502-11885cad-8a4e-4390-801c-f5b8bad420a2.svg)
 
 ## Model Architecture
 The model architecture consists of the following layers:
@@ -39,6 +38,7 @@ The model architecture consists of the following layers:
 - Flatten layer to convert the output of the convolutional layers into a 1D array.
 - Two fully connected layers with 128 and 64 neurons and ReLU activation function.
 - Output layer with a single neuron and linear activation function.
+
 
 ## Training
 The model is trained for 30 epochs using the Adam optimizer and Mean Squared Error (MSE) loss function. The model is compiled with Root Mean Squared Error (RMSE), MSE, and Mean Absolute Error (MAE) metrics to monitor the training progress. The training was performed using Google Colab.
