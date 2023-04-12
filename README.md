@@ -22,7 +22,7 @@ The dataset consists of depthmap images and corresponding pose key points and he
 ```bash
 pip install opencv-python numpy pandas tensorflow numpy pandas seaborn matplotlib
 ```
-5. Open the provided Jupyter notebook on Google Colab or locally and run the code cells sequentially.
+5. Open the provided Jupyter notebook - 'depthmap_model.ipynb' on Google Colab or locally and run the code cells sequentially.
 6. Make sure to change the paths to the dataset and any other relevant paths as per your local setup.
 7. Once the model has been trained, you can use it to predict the height of children given a new depthmap and pose key points.
 
