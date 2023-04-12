@@ -39,6 +39,14 @@ The model architecture consists of the following layers:
 - Two fully connected layers with 128 and 64 neurons and ReLU activation function.
 - Output layer with a single neuron and linear activation function.
 
+## Reasoning for Deep Learning based CNN selection
+1. The selected deep learning algorithm for predicting estimated heights in a person is a Convolutional Neural Network (CNN). CNNs are often used in image recognition tasks, as they are specifically designed to handle the spatial relationships present in images.
+
+2. In this case, the input data consists of depth maps, which are essentially 2D images. The CNN architecture used in the code snippet includes multiple convolutional layers, which are able to identify various features in the input image, followed by max pooling layers, which reduce the spatial dimensions of the output.
+
+3. After several convolutional and pooling layers, the output is flattened and passed through fully connected layers, which can learn to combine the various features extracted from the input. Finally, a single output neuron is used with a linear activation function to predict the estimated height of the person.
+
+4. Overall, the CNN architecture is a good choice for this task because it is designed to handle spatial data like images, and is capable of learning complex features that are important for estimating the height of a person.
 
 ## Training
 The model is trained for 30 epochs using the Adam optimizer and Mean Squared Error (MSE) loss function. The model is compiled with Root Mean Squared Error (RMSE), MSE, and Mean Absolute Error (MAE) metrics to monitor the training progress. The training was performed using Google Colab.
